@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="icon" href="Images/LOGO-ICON.svg">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Rate It</title>
+</head>
+<body>
+    <div class="overview">
+        <div class="overview-sidebar">
+            <div class="overview-logo">
+                <img src="Images/LOGO.svg" alt="" onclick="window.location.href = 'index.html' ">
+            </div>
+            <div class="mobile-logo">
+                <img src="Images/LOGO-ICON.svg" alt="" onclick="window.location.href = 'index.html' ">
+            </div>
+            <ul>
+                <li>
+                    <a href="overview.html">
+                        <i class='bx bxs-dashboard'></i>
+                        <span>Overview</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="active" href="team.html">
+                        <i class='bx bxl-microsoft-teams'></i>
+                        <span>Team</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bxs-data'></i>
+                        <span>Insights</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="membership.html">
+                        <i class='bx bx-credit-card'></i>
+                        <span>Membership</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="profile.html">
+                        <i class='bx bx-user'></i>
+                        <span>My Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bxs-cog'></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="overview-container">
+            <div class="overview-header two">
+                <div class="overview-search">
+                    <i class='bx bx-search'></i>
+                    <input type="text" placeholder="Members Search" id="searchInput">
+                    <i class='bx bxs-x-square' id="closeIcon"></i>
+                </div>
+                <div class="overview-profile">
+                    <div class="overview-myprofile" onclick="toggleDropdownTwo()">
+                        <img src="Images/PROFILE.png" alt="">
+                        <div id="dropdownTwo" class="dropdown-myprofile m">
+                            <a href="#">
+                                <i class='bx bx-cog'></i>
+                                <span>Settings</span>
+                            </a>
+                            <a href="#">
+                                <i class='bx bx-log-in' ></i>
+                                <span>Log Out</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h1>Team Members</h1>
+            <div class="overview-card-container">
+                <div class="overview-card">
+                    <div class="overview-card-details-icon">
+                        <i class='bx bx-trash' onclick="showPopup(this)"></i>
+                    </div>
+                    <div id="deletePopup" class="popup" style="display: none;">
+                        <div class="popup-content"> <!-- This wrapper represents the actual popup content -->
+                            <div class="options">
+                                <h2>Are You Sure You Want To Remove This Member?</h2>
+                                <div class="button-options">
+                                    <button id="confirmDelete" onclick="confirmDelete()">Yes, Delete</button>
+                                    <button id="cancelDelete" onclick="hidePopup()">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="overview-card-image">
+                        <img src="Images/AVA1.png" alt="">
+                    </div>
+                    <div class="overview-card-name">
+                        <h2>Nathan Ray</h2>
+                        <h4>Los Angeles, USA</h4>
+                    </div>
+                    <div class="overview-member-skills">
+                        <a href="#">UI</a>
+                        <a href="#">UX</a>
+                        <a href="#">Photoshop</a>
+                        <span>+2</span>
+                    </div>
+                    <div class="overview-member-social">
+                        <div class="overview-member-social-child">
+                            <i class='bx bxl-facebook-square'></i>
+                            <span>400K</span>
+                        </div>
+                        <div class="overview-member-social-child">
+                            <i class='bx bxl-twitter' ></i>
+                            <span>120K</span>
+                        </div>
+                        <div class="overview-member-social-child">
+                            <i class='bx bxl-instagram' ></i>
+                            <span>560K</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-card-details-icon">
+                        <i class='bx bx-trash' onclick="showPopup(this)"></i>
+                    </div>
+                    <div id="deletePopup" class="popup" style="display: none;">
+                        <div class="options">
+                            <h2>Are You Sure You Want To Remove This Member?</h2>
+                            <div class="button-options">
+                                <button id="confirmDelete" onclick="confirmDelete()">Yes, Delete</button>
+                                <button id="cancelDelete" onclick="hidePopup()">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overview-card-image">
+                        <img src="Images/AVA7.png" alt="">
+                    </div>
+                    <div class="overview-card-name">
+                        <h2>Amira Ahmed</h2>
+                        <h4>Mansoura , EGY</h4>
+                    </div>
+                    <div class="overview-member-skills">
+                        <a href="#">UI</a>
+                        <a href="#">Figma</a>
+                        <a href="#">Photoshop</a>
+                        <span>+1</span>
+                    </div>
+                    <div class="overview-member-social">
+                        <div class="overview-member-social-child">
+                            <i class='bx bxl-facebook-square'></i>
+                            <span>20K</span>
+                        </div>
+                        <div class="overview-member-social-child">
+                            <i class='bx bxl-twitter' ></i>
+                            <span>25K</span>
+                        </div>
+                        <div class="overview-member-social-child">
+                            <i class='bx bxl-instagram' ></i>
+                            <span>100K</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-card-details-icon">
+                        <i class='bx bx-trash' onclick="showPopup(this)"></i>
+                    </div>
+                    <div id="deletePopup" class="popup" style="display: none;">
+                        <div class="options">
+                            <h2>Are You Sure You Want To Remove This Member?</h2>
+                            <div class="button-options">
+                                <button id="confirmDelete" onclick="confirmDelete()">Yes, Delete</button>
+                                <button id="cancelDelete" onclick="hidePopup()">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overview-card-image">
+                        <img src="Images/AVA3.png" alt="">
+                    </div>
+                    <div class="overview-card-name">
+                        <h2>John Wayne</h2>
+                        <h4>California, USA</h4>
+                    </div>
+                    <div class="overview-member-skills">
+                        <a href="#">HTML</a>
+                        <a href="#">CSS</a>
+                    </div>
+                    <div class="overview-member-social">
+                        <div class="overview-member-social-child">
+                            <i class='bx bxl-facebook-square'></i>
+                            <span>10K</span>
+                        </div>
+                        <div class="overview-member-social-child">
+                            <i class='bx bxl-twitter' ></i>
+                            <span>5K</span>
+                        </div>
+                        <div class="overview-member-social-child">
+                            <i class='bx bxl-instagram' ></i>
+                            <span>7.5K</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-card-details-icon">
+                        <i class='bx bx-trash' onclick="showPopup(this)"></i>
+                    </div>
+                    <div id="deletePopup" class="popup" style="display: none;">
+                        <div class="options">
+                            <h2>Are You Sure You Want To Remove This Member?</h2>
+                            <div class="button-options">
+                                <button id="confirmDelete" onclick="confirmDelete()">Yes, Delete</button>
+                                <button id="cancelDelete" onclick="hidePopup()">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overview-card-image">
+                        <img src="Images/AVA4.png" alt="">
+                    </div>
+                    <div class="overview-card-name">
+                        <h2>Van Marco</h2>
+                        <h4>Nice, France</h4>
+                    </div>
+                    <div class="overview-member-skills">
+                        <a href="#">UI</a>
+                        <a href="#">Figma</a>
+                        <a href="#">Photoshop</a>
+                        <span>+3</span>
+                    </div>
+                    <div class="overview-member-social">
+                        <div class="overview-member-social-child">
+                            <i class='bx bxl-facebook-square'></i>
+                            <span>1M</span>
+                        </div>
+                        <div class="overview-member-social-child">
+                            <i class='bx bxl-twitter' ></i>
+                            <span>780K</span>
+                        </div>
+                        <div class="overview-member-social-child">
+                            <i class='bx bxl-instagram' ></i>
+                            <span>510K</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-card-details-icon">
+                        <i class='bx bx-trash' onclick="showPopup(this)"></i>
+                    </div>
+                    <div id="deletePopup" class="popup" style="display: none;">
+                        <div class="options">
+                            <h2>Are You Sure You Want To Remove This Member?</h2>
+                            <div class="button-options">
+                                <button id="confirmDelete" onclick="confirmDelete()">Yes, Delete</button>
+                                <button id="cancelDelete" onclick="hidePopup()">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overview-card-image">
+                        <img src="Images/AVA5.png" alt="">
+                    </div>
+                    <div class="overview-card-name">
+                        <h2>Yamine Smith</h2>
+                        <h4>Los Angeles, USA</h4>
+                    </div>
+                    <div class="overview-member-skills">
+                        <a href="#">HTML</a>
+                        <a href="#">CSS</a>
+                        <a href="#">Python</a>
+                    </div>
+                    <div class="overview-member-social">
+                        <div class="overview-member-social-child">
+                            <i class='bx bxl-facebook-square'></i>
+                            <span>400K</span>
+                        </div>
+                        <div class="overview-member-social-child">
+                            <i class='bx bxl-twitter' ></i>
+                            <span>120K</span>
+                        </div>
+                        <div class="overview-member-social-child">
+                            <i class='bx bxl-instagram' ></i>
+                            <span>560K</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-card-details-icon">
+                        <i class='bx bx-trash' onclick="showPopup(this)"></i>
+                    </div>
+                    <div id="deletePopup" class="popup" style="display: none;">
+                        <div class="options">
+                            <h2>Are You Sure You Want To Remove This Member?</h2>
+                            <div class="button-options">
+                                <button id="confirmDelete" onclick="confirmDelete()">Yes, Delete</button>
+                                <button id="cancelDelete" onclick="hidePopup()">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overview-card-image">
+                        <img src="Images/AVA6.png" alt="">
+                    </div>
+                    <div class="overview-card-name">
+                        <h2>Gergory Johnes</h2>
+                        <h4>USA</h4>
+                    </div>
+                    <div class="overview-member-skills">
+                        <a href="#">UI</a>
+                        <a href="#">Figma</a>
+                        <a href="#">Photoshop</a>
+                    </div>
+                    <div class="overview-member-social">
+                        <div class="overview-member-social-child">
+                            <i class='bx bxl-facebook-square'></i>
+                            <span>100K</span>
+                        </div>
+                        <div class="overview-member-social-child">
+                            <i class='bx bxl-twitter' ></i>
+                            <span>20K</span>
+                        </div>
+                        <div class="overview-member-social-child">
+                            <i class='bx bxl-instagram' ></i>
+                            <span>60K</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-card-details-icon">
+                        <i class='bx bx-trash' onclick="showPopup(this)"></i>
+                    </div>
+                    <div id="deletePopup" class="popup" style="display: none;">
+                        <div class="options">
+                            <h2>Are You Sure You Want To Remove This Member?</h2>
+                            <div class="button-options">
+                                <button id="confirmDelete" onclick="confirmDelete()">Yes, Delete</button>
+                                <button id="cancelDelete" onclick="hidePopup()">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overview-card-image">
+                        <img src="Images/AVA2.png" alt="">
+                    </div>
+                    <div class="overview-card-name">
+                        <h2>Mark Pasadlo</h2>
+                        <h4>Dublin, Irelead</h4>
+                    </div>
+                    <div class="overview-member-skills">
+                        <a href="#">HTML</a>
+                        <a href="#">CSS</a>
+                        <a href="#">JS</a>
+                        <span>+5</span>
+                    </div>
+                    <div class="overview-member-social">
+                        <div class="overview-member-social-child">
+                            <i class='bx bxl-facebook-square'></i>
+                            <span>1.2M</span>
+                        </div>
+                        <div class="overview-member-social-child">
+                            <i class='bx bxl-twitter' ></i>
+                            <span>870K</span>
+                        </div>
+                        <div class="overview-member-social-child">
+                            <i class='bx bxl-instagram' ></i>
+                            <span>2.2M</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-card-details-icon">
+                        <i class='bx bx-trash' onclick="showPopup(this)"></i>
+                    </div>
+                    <div id="deletePopup" class="popup" style="display: none;">
+                        <div class="options">
+                            <h2>Are You Sure You Want To Remove This Member?</h2>
+                            <div class="button-options">
+                                <button id="confirmDelete" onclick="confirmDelete()">Yes, Delete</button>
+                                <button id="cancelDelete" onclick="hidePopup()">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overview-card-image">
+                        <img src="Images/AVA8.png" alt="">
+                    </div>
+                    <div class="overview-card-name">
+                        <h2>Eslam Youssef</h2>
+                        <h4>Tanta, EGY</h4>
+                    </div>
+                    <div class="overview-member-skills">
+                        <a href="#">UI</a>
+                        <a href="#">UX</a>
+                        <a href="#">Photoshop</a>
+                    </div>
+                    <div class="overview-member-social">
+                        <div class="overview-member-social-child">
+                            <i class='bx bxl-facebook-square'></i>
+                            <span>840K</span>
+                        </div>
+                        <div class="overview-member-social-child">
+                            <i class='bx bxl-twitter' ></i>
+                            <span>350K</span>
+                        </div>
+                        <div class="overview-member-social-child">
+                            <i class='bx bxl-instagram' ></i>
+                            <span>710K</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="overview-card">
+                    <div class="overview-card-details-icon">
+                        <i class='bx bx-trash' onclick="showPopup(this)"></i>
+                    </div>
+                    <div id="deletePopup" class="popup" style="display: none;">
+                        <div class="options">
+                            <h2>Are You Sure You Want To Remove This Member?</h2>
+                            <div class="button-options">
+                                <button id="confirmDelete" onclick="confirmDelete()">Yes, Delete</button>
+                                <button id="cancelDelete" onclick="hidePopup()">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overview-card-image">
+                        <img src="Images/AVA9.png" alt="">
+                    </div>
+                    <div class="overview-card-name">
+                        <h2>Nada Esmail</h2>
+                        <h4>Mansoura, EGY</h4>
+                    </div>
+                    <div class="overview-member-skills">
+                        <a href="#">UI</a>
+                        <a href="#">UX</a>
+                        <a href="#">Figma</a>
+                        <span>+8</span>
+                    </div>
+                    <div class="overview-member-social">
+                        <div class="overview-member-social-child">
+                            <i class='bx bxl-facebook-square'></i>
+                            <span>3M</span>
+                        </div>
+                        <div class="overview-member-social-child">
+                            <i class='bx bxl-twitter' ></i>
+                            <span>1.2M</span>
+                        </div>
+                        <div class="overview-member-social-child">
+                            <i class='bx bxl-instagram' ></i>
+                            <span>2.5M</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="JS/four.js"></script>
+</body>
+</html>

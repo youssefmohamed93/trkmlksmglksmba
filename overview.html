@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="icon" href="Images/LOGO-ICON.svg">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Rate It</title>
+</head>
+<body>
+    <div class="overview">
+        <div class="overview-sidebar">
+            <div class="overview-logo">
+                <img src="Images/LOGO.svg" alt="" onclick="window.location.href = 'index.html' ">
+            </div>
+            <div class="mobile-logo">
+                <img src="Images/LOGO-ICON.svg" alt="" onclick="window.location.href = 'index.html' ">
+            </div>
+            <ul>
+                <li>
+                    <a id="active" href="overview.html">
+                        <i class='bx bxs-dashboard'></i>
+                        <span>Overview</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="team.html">
+                        <i class='bx bxl-microsoft-teams'></i>
+                        <span>Team</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bxs-data'></i>
+                        <span>Insights</span>
+                    </a>
+                </li>
+                <li>
+                    <a calss="active" href="membership.html">
+                        <i class='bx bx-credit-card'></i>
+                        <span>Membership</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="profile.html">
+                        <i class='bx bx-user'></i>
+                        <span>My Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bxs-cog'></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="overview-sidebar-image">
+                <img src="Images/OVERVIEW.svg" alt="">
+            </div>
+            <div class="overview-sidebar-btn">
+                <a href="membership.html">Upgrade your plan</a>
+            </div>
+        </div>
+        <div class="overview-container">
+            <div class="overview-header two">
+                <div class="overview-search">
+                    <i class='bx bx-search'></i>
+                    <input type="search" placeholder="Search">
+                </div>
+                <div class="overview-profile">
+                    <div class="overview-myprofile" onclick="toggleDropdownTwo()">
+                        <img src="Images/PROFILE.png" alt="">
+                        <div id="dropdownTwo" class="dropdown-myprofile">
+                            <a href="#">
+                                <i class='bx bx-cog'></i>
+                                <span>Settings</span>
+                            </a>
+                            <a href="#">
+                                <i class='bx bx-log-in' ></i>
+                                <span>Log Out</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="overview-content">
+                <h1>Meetings</h1>
+                <ul>
+                    <li>
+                        <a href="#" class="active-meeting">All</a>
+                    </li>
+                    <li>
+                        <a href="#" data-content=".one">Upcoming</a>
+                    </li>
+                    <li>
+                        <a href="#" data-content="#two">Past</a>
+                    </li>
+                    <li>
+                        <a href="#" data-content=".three">Archived</a>
+                    </li>
+                </ul>
+                <div class="overview-box-container">
+                    <div class="overview-box one">
+                        <div class="overview-text">
+                            <i class='bx bxs-star gold' id="starIcon"></i>
+                            <div class="overview-box-text">
+                                <h2>Sales Kickoff Meeting</h2>
+                                <div class="box-text">
+                                    <p>Jan 5 09:30</p>
+                                    <span id="status">Ready</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="overview-text-two">
+                            <div class="text-two-icon"  style="margin-right: 45px;">
+                                <i class='bx bxs-user'></i>
+                                <span>10 Participants</span>
+                            </div>
+                            <div class="checkBoxLabel">
+                                <input type="checkbox" id="checkbox" checked> 
+                                <label for="checkbox" id="check"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overview-box" id="two">
+                        <div class="overview-text">
+                            <i class='bx bxs-star' id="starIcon2"></i>
+                            <div class="overview-box-text">
+                                <h2>Marketing Biweekly</h2>
+                                <div class="box-text">
+                                    <p>Jan 6 09:45</p>
+                                    <span class="cancel-span">Canceld</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="overview-text-two">
+                            <div class="text-two-icon">
+                                <i class='bx bxs-user' ></i>
+                                <span>19 Participants</span>
+                            </div>
+                            <div class="text-icon-two">
+                                <i class='bx bx-minus'></i>
+                                <span>Average rating</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overview-box three">
+                        <div class="overview-text">
+                            <i class='bx bxs-star' id="starIcon3"></i>
+                            <div class="overview-box-text">
+                                <h2>Team Call</h2>
+                                <div class="box-text">
+                                    <p>Jan 7 09:40</p>
+                                    <span class="draft-span">Draft</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="overview-text-two">
+                            <div class="text-two-icon">
+                                <i class='bx bxs-user' ></i>
+                                <span>11 Participants</span>
+                            </div>
+                            <div class="text-icon-two">
+                                <i class='bx bx-minus'></i>
+                                <span>Average rating</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="circles two">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="JS/second.js"></script>
+</body>
+</html>
